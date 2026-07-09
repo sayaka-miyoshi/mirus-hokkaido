@@ -1,0 +1,18 @@
+# Local / dev only
+mock/
+MIRUS戦略担当/
+iSTEP/
+netlify-deploy/
+MIRUS-netlify-deploy.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependencies
+node_modules/
+
+# Env / secrets
+.env
+.env.*

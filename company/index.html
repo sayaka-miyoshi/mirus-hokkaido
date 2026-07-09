@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会社情報 | 株式会社MIRUS</title>
+  <meta name="description" content="株式会社MIRUSの会社概要。登記住所・代表者・事業内容を掲載。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo">MI<span>RUS</span></a>
+      <nav class="nav-desktop">
+        <a href="/#services">事業内容</a>
+        <a href="/#works">実績</a>
+        <a href="/#company">会社概要</a>
+        <a href="/contact/" class="btn btn-primary header-cta header-cta-desktop">お問い合わせ</a>
+      </nav>
+      <button class="menu-toggle" aria-label="メニューを開く" id="menuToggle"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="navMobile">
+    <a href="/#services">事業内容</a>
+    <a href="/#works">実績</a>
+    <a href="/#company">会社概要</a>
+    <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="breadcrumb"><a href="/">TOP</a> / 会社情報</p>
+        <p class="section-label font-en">Company</p>
+        <h1 class="section-title">会社情報</h1>
+        <p class="section-lead">北海道の魅力を世界へ届ける事業会社</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container page-content--narrow">
+        <div class="content-block">
+          <h2>会社概要</h2>
+          <ul class="content-list" id="company-profile-list">
+            <li><strong>会社名</strong> 株式会社MIRUS（ミルス）</li>
+            <li><strong>代表者</strong> 三好 清佳</li>
+            <li><strong>設立</strong> 2026年6月</li>
+            <li><strong>法人番号</strong> 8430001097150</li>
+            <li><strong>所在地</strong> 北海道札幌市中央区南二条西五丁目31-1 RMBld.701</li>
+            <li><strong>電話番号</strong> <span id="company-phone">090-3899-3333</span></li>
+            <li><strong>事業内容</strong>
+              SNS運用、映像制作、広告・PR、インフルエンサーマーケティング、観光PR
+            </li>
+            <li><strong>お問い合わせ</strong> <a href="mailto:info@mirus-hokkaido.jp" id="company-email">info@mirus-hokkaido.jp</a></li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h2>代表メッセージ</h2>
+          <p>北海道にはまだ知られていない魅力が数多くあります。MIRUSはSNS・動画・インフルエンサー・海外ネットワークを活用し、自治体・企業・観光地の魅力を国内外へ発信します。</p>
+          <p style="margin-top:16px;">北海道観光大使・札幌観光大使として培ったネットワークと実績を活かし、企画から実行まで一貫して伴走いたします。</p>
+          <p style="margin-top:24px;font-weight:700;color:var(--text-primary);">代表取締役　三好 清佳</p>
+        </div>
+
+        <a href="/contact/" class="btn btn-primary btn-arrow">お問い合わせ</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/site-config.js"></script>
+  <script>
+    (function () {
+      const c = window.MIRUS_SITE;
+      if (!c) return;
+      const phone = document.getElementById("company-phone");
+      const email = document.getElementById("company-email");
+      if (phone) {
+        phone.innerHTML = `<a href="tel:${c.phoneTel}">${c.phone}</a>`;
+      }
+      if (email) {
+        email.href = `mailto:${c.email}`;
+        email.textContent = c.email;
+      }
+    })();
+  </script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

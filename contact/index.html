@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 株式会社MIRUS</title>
+  <meta name="description" content="株式会社MIRUSへのお問い合わせ。海外PR、SNS運用、映像制作などお気軽にご相談ください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo">MI<span>RUS</span></a>
+      <nav class="nav-desktop">
+        <a href="/#services">事業内容</a>
+        <a href="/#works">実績</a>
+        <a href="/#company">会社概要</a>
+        <a href="/contact/" class="btn btn-primary header-cta header-cta-desktop">お問い合わせ</a>
+      </nav>
+      <button class="menu-toggle" aria-label="メニューを開く" id="menuToggle"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="navMobile">
+    <a href="/#services">事業内容</a>
+    <a href="/#works">実績</a>
+    <a href="/#company">会社概要</a>
+    <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="breadcrumb"><a href="/">TOP</a> / お問い合わせ</p>
+        <p class="section-label font-en">Contact</p>
+        <h1 class="section-title">お問い合わせ</h1>
+        <p class="section-lead">海外PR、SNS運用、映像制作など、お気軽にご相談ください。目的や予算感が固まっていなくても大丈夫です。</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+        <div class="contact-methods">
+          <div class="contact-method-card">
+            <h3>お問い合わせフォーム</h3>
+            <p>24時間受付。2営業日以内にご返信いたします（目安）。</p>
+            <a href="#form" class="btn btn-primary">フォームへ</a>
+          </div>
+          <div class="contact-method-card">
+            <h3>メール</h3>
+            <p>メールでのお問い合わせも可能です。</p>
+            <a href="mailto:info@mirus-hokkaido.jp" class="btn btn-secondary" id="contact-mail-btn">info@mirus-hokkaido.jp</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="form" action="https://formsubmit.co/info@mirus-hokkaido.jp" method="POST">
+          <input type="hidden" name="_subject" value="【MIRUS公式サイト】お問い合わせ">
+          <input type="hidden" name="_next" value="https://mirus-hokkaido.jp/contact/thanks.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="form-group">
+            <label for="name">お名前 <span class="required">必須</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="company">会社名 <span class="required">必須</span></label>
+            <input type="text" id="company" name="company" required>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">必須</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">電話番号</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="category">ご相談内容 <span class="required">必須</span></label>
+            <select id="category" name="category" required>
+              <option value="">選択してください</option>
+              <option value="海外インフルエンサーマーケティング">海外インフルエンサーマーケティング</option>
+              <option value="SNS運用・動画制作">SNS運用・動画制作</option>
+              <option value="観光・自治体プロモーション">観光・自治体プロモーション</option>
+              <option value="AIコンテンツ制作">AIコンテンツ制作</option>
+              <option value="不動産事業">不動産事業</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">お問い合わせ詳細 <span class="required">必須</span></label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-checkbox">
+              <input type="checkbox" name="privacy" required>
+              <span><a href="/privacy/">プライバシーポリシー</a>に同意する</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-arrow">送信する</button>
+        </form>
+
+        <p class="clients-note" style="margin-top:24px;">※ 初回送信時、FormSubmitから <strong>info@mirus-hokkaido.jp</strong> に確認メールが届きます。リンクをクリックしてフォームを有効化してください。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/site-config.js"></script>
+  <script>
+    (function () {
+      const c = window.MIRUS_SITE;
+      if (!c) return;
+      const btn = document.getElementById("contact-mail-btn");
+      if (btn) { btn.href = `mailto:${c.email}`; btn.textContent = c.email; }
+      const next = document.querySelector('input[name="_next"]');
+      if (next && c.domain) next.value = `https://${c.domain}/contact/thanks.html`;
+    })();
+  </script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
