@@ -16,3 +16,9 @@ node_modules/
 # Env / secrets
 .env
 .env.*
+
+# Local Netlify folder
+.netlify
+
+# Local business docs (not for public deploy)
+事業計画書/
