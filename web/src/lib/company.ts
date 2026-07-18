@@ -90,16 +90,12 @@ export const relatedServiceOptions = [
   { label: "インフルエンサー・自治体広報", value: "influencer-gov" },
 ] as const;
 
-export const works = [
-  {
-    client: "渡邊清掃株式会社",
-    category: "SNS運用・採用PR",
-    description:
-      "株式会社MIRUSのStrategic Partnerである合同会社KプロジェクトによるSNS・採用広報支援事例",
-    metrics: [
-      { label: "SNS", value: "採用広報・SNS運用" },
-      { label: "VIDEO", value: "リール動画制作・企業PR" },
-    ],
-    image: "/images/works/watanabe.png",
-  },
-] as const;
+export type WorkItem = {
+  client: string;
+  category: string;
+  description: string;
+  metrics: readonly { label: string; value: string }[];
+  image?: string;
+};
+
+export const works: readonly WorkItem[] = [];

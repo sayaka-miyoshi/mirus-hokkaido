@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { company } from "@/lib/company";
+import { company, works } from "@/lib/company";
 
 const nav = [
   { href: "/#philosophy", label: "Philosophy" },
   { href: "/#about", label: "About" },
   { href: "/#service", label: "Service" },
-  { href: "/#works", label: "Works" },
+  ...(works.length > 0 ? [{ href: "/#works", label: "Works" }] : []),
   { href: "/news", label: "News" },
   { href: "/insights", label: "Insights" },
   { href: "/#company", label: "Company" },

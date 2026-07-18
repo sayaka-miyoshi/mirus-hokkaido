@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { company } from "@/lib/company";
 
-const POSTER = "/images/works/watanabe.png";
+const POSTER = "/images/representative.png";
 
 export function Hero() {
   const [hasVideo, setHasVideo] = useState(false);

@@ -4,6 +4,8 @@ import { ArticleCover } from "@/components/content/ArticleCover";
 import { works } from "@/lib/company";
 
 export function Works() {
+  if (works.length === 0) return null;
+
   return (
     <section id="works" className="section bg-[var(--bg-elevated)]">
       <div className="container">

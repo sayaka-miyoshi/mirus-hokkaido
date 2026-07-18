@@ -33,20 +33,25 @@ function sortByDateDesc<T extends { publishedAt: string | null }>(items: T[]) {
   });
 }
 
-export async function getAllNews() {
+export async function getAllNews(options?: { includeDrafts?: boolean }) {
   const items = await reader.collections.news.all();
-  return sortByDateDesc(
-    items.map((item) => ({
-      slug: item.slug,
-      title: item.entry.title,
-      summary: item.entry.summary,
-      category: item.entry.category as NewsCategory,
-      publishedAt: item.entry.publishedAt ?? null,
-      venue: item.entry.venue?.trim() ? item.entry.venue.trim() : null,
-      coverImage: item.entry.coverImage,
-      relatedServices: (item.entry.relatedServices ?? []) as RelatedServiceValue[],
-    })),
-  );
+  const mapped = items.map((item) => ({
+    slug: item.slug,
+    title: item.entry.title,
+    summary: item.entry.summary,
+    category: item.entry.category as NewsCategory,
+    status: (item.entry.status ?? "published") as PublishStatus,
+    publishedAt: item.entry.publishedAt ?? null,
+    venue: item.entry.venue?.trim() ? item.entry.venue.trim() : null,
+    coverImage: item.entry.coverImage,
+    relatedServices: (item.entry.relatedServices ?? []) as RelatedServiceValue[],
+  }));
+
+  const filtered = options?.includeDrafts
+    ? mapped
+    : mapped.filter((item) => item.status === "published");
+
+  return sortByDateDesc(filtered);
 }
 
 export async function getLatestNews(limit = 3) {
@@ -54,15 +59,20 @@ export async function getLatestNews(limit = 3) {
   return all.slice(0, limit);
 }
 
-export async function getNewsBySlug(slug: string) {
+export async function getNewsBySlug(slug: string, options?: { includeDrafts?: boolean }) {
   const entry = await reader.collections.news.read(slug);
   if (!entry) return null;
+
+  const status = (entry.status ?? "published") as PublishStatus;
+  if (!options?.includeDrafts && status !== "published") return null;
+
   const body = await entry.body();
   return {
     slug,
     title: entry.title,
     summary: entry.summary,
     category: entry.category as NewsCategory,
+    status,
     publishedAt: entry.publishedAt ?? null,
     venue: entry.venue?.trim() ? entry.venue.trim() : null,
     coverImage: entry.coverImage,

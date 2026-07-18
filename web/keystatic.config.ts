@@ -29,6 +29,14 @@ export default config({
           ],
           defaultValue: "News",
         }),
+        status: fields.select({
+          label: "公開状態",
+          options: [
+            { label: "下書き (draft)", value: "draft" },
+            { label: "公開 (published)", value: "published" },
+          ],
+          defaultValue: "published",
+        }),
         publishedAt: fields.date({
           label: "公開日（イベント開催日に合わせる。未確定の場合は空欄）",
         }),
