@@ -20,5 +20,11 @@ node_modules/
 # Local Netlify folder
 .netlify
 
+# Next.js
+web/.next/
+web/out/
+web/node_modules/
+
 # Local business docs (not for public deploy)
 事業計画書/
+クライアント別/
