@@ -7,14 +7,16 @@ export function About() {
     <section id="about" className="section bg-[var(--bg-elevated)]">
       <div className="container grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-[var(--surface)]">
-            <Image
-              src="/images/representative.png"
-              alt={`${company.representativeTitle} ${company.representative}`}
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 100vw, 480px"
-            />
+          <div className="mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:mx-0 lg:max-w-[340px]">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-[var(--surface)]">
+              <Image
+                src="/images/representative.png"
+                alt={`${company.representativeTitle} ${company.representative}`}
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 320px, 340px"
+              />
+            </div>
           </div>
         </Reveal>
         <Reveal delay={0.1}>
@@ -22,7 +24,7 @@ export function About() {
           <div className="eyebrow-rule" />
           <h2 className="section-title">企画・AI・DXから、北海道の次をつくる。</h2>
           <p className="section-lead">
-            {company.name}は、{company.business}を軸に、企業・自治体・地域の挑戦を設計する会社です。
+            {company.name}は、{company.business}を軸に、企業・自治体・地域の挑戦を設計します。
             現場の発信実行は{strategicPartner.label}（{strategicPartner.labelJa}）の
             {strategicPartner.name}と連携し、企画から実装までつなぎます。
           </p>
@@ -40,15 +42,6 @@ export function About() {
             <div className="flex gap-6">
               <dt className="w-28 shrink-0 text-[var(--text-muted)]">事業領域</dt>
               <dd>{company.servicesLine}</dd>
-            </div>
-            <div className="flex gap-6">
-              <dt className="w-28 shrink-0 text-[var(--text-muted)]">{strategicPartner.label}</dt>
-              <dd>
-                {strategicPartner.name}
-                <span className="mt-1 block text-[var(--text-muted)]">
-                  {strategicPartner.roles.join(" ／ ")}
-                </span>
-              </dd>
             </div>
           </dl>
         </Reveal>

@@ -2,7 +2,7 @@ import { Reveal } from "@/components/motion/Reveal";
 
 export function Philosophy() {
   return (
-    <section id="philosophy" className="section">
+    <section id="philosophy" className="section philosophy">
       <div className="container">
         <Reveal>
           <p className="section-label">Philosophy</p>

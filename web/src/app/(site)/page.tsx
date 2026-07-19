@@ -22,7 +22,6 @@ export default async function HomePage() {
     name: company.name,
     url: company.domain,
     email: company.email,
-    telephone: company.phone,
     address: {
       "@type": "PostalAddress",
       streetAddress: "中央区南二条西五丁目31-1 RMBld.701",
@@ -46,11 +45,11 @@ export default async function HomePage() {
       <Hero />
       <Philosophy />
       <About />
+      <Company />
       <Service />
       <Works />
       <HomeNews items={latestNews} />
       {publishedInsightsCount > 0 ? <HomeInsights /> : null}
-      <Company />
       <Contact />
     </>
   );

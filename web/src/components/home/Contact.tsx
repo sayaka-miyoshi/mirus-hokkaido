@@ -11,7 +11,7 @@ export function Contact() {
             <div className="mx-auto eyebrow-rule" />
             <h2 className="section-title">お問い合わせ</h2>
             <p className="mx-auto section-lead">
-              企画・AI・DX・新規事業、および連携体制でのSNS・映像・広報支援に関するご相談は、メールまたはお電話よりご連絡ください。
+              企画・AI・DX・新規事業、および連携体制でのSNS・映像・広報支援に関するご相談は、メールよりご連絡ください。
             </p>
 
             <div className="mt-12 space-y-4 rounded-sm border border-white/8 bg-[var(--bg-elevated)] p-8 text-left">
@@ -20,10 +20,6 @@ export function Contact() {
                 <a href={`mailto:${company.email}`} className="text-[var(--accent)] hover:underline">
                   {company.email}
                 </a>
-              </p>
-              <p className="flex flex-col gap-1 border-b border-white/8 pb-4 sm:flex-row sm:gap-6">
-                <span className="w-24 shrink-0 text-sm text-[var(--text-muted)]">電話</span>
-                <a href={`tel:${company.phoneTel}`}>{company.phone}</a>
               </p>
               <p className="flex flex-col gap-1 sm:flex-row sm:gap-6">
                 <span className="w-24 shrink-0 text-sm text-[var(--text-muted)]">所在地</span>

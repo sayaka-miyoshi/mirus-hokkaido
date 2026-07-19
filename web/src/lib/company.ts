@@ -8,8 +8,6 @@ export const company = {
   postalCode: "〒060-0062",
   address: "北海道札幌市中央区南二条西五丁目31-1 RMBld.701",
   addressFull: "〒060-0062 北海道札幌市中央区南二条西五丁目31-1 RMBld.701",
-  phone: "090-3899-3333",
-  phoneTel: "09038993333",
   email: "info@mirus-hokkaido.jp",
   domain: "https://mirus-hokkaido.jp",
   /** MIRUS本体の事業領域 */

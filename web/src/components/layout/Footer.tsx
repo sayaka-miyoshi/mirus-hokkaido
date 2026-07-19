@@ -61,11 +61,6 @@ export function Footer() {
                   {company.email}
                 </a>
               </li>
-              <li>
-                <a href={`tel:${company.phoneTel}`} className="hover:text-[var(--accent)]">
-                  TEL {company.phone}
-                </a>
-              </li>
             </ul>
           </div>
         </div>
