@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/motion/Reveal";
 import { formatDate } from "@/lib/content";
@@ -8,6 +9,7 @@ type NewsItem = {
   summary: string;
   category: string;
   publishedAt: string | null;
+  coverImage?: string | null;
 };
 
 export function HomeNews({ items }: { items: NewsItem[] }) {
@@ -34,15 +36,30 @@ export function HomeNews({ items }: { items: NewsItem[] }) {
               <Reveal key={item.slug} delay={index * 0.05}>
                 <Link
                   href={`/news/${item.slug}`}
-                  className="group grid gap-3 py-8 transition-colors hover:bg-white/[0.02] md:grid-cols-[140px_120px_1fr] md:items-baseline md:gap-8"
+                  className="group grid gap-4 py-8 transition-colors hover:bg-white/[0.02] md:grid-cols-[120px_140px_1fr] md:items-center md:gap-8"
                 >
                   <span className="font-[family-name:var(--font-display)] text-sm tracking-[0.08em] text-[var(--text-muted)]">
                     {displayDate && item.publishedAt ? (
                       <time dateTime={item.publishedAt}>{displayDate}</time>
                     ) : null}
                   </span>
-                  <span className="text-xs tracking-[0.14em] text-[var(--accent)]">{item.category}</span>
+
+                  {item.coverImage ? (
+                    <div className="relative aspect-[16/10] w-full max-w-[140px] overflow-hidden rounded-sm border border-white/10 bg-[var(--surface)]">
+                      <Image
+                        src={item.coverImage}
+                        alt=""
+                        fill
+                        className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                        sizes="140px"
+                      />
+                    </div>
+                  ) : (
+                    <span className="text-xs tracking-[0.14em] text-[var(--accent)]">{item.category}</span>
+                  )}
+
                   <div>
+                    <p className="mb-1 text-[0.65rem] tracking-[0.14em] text-[var(--accent)]">{item.category}</p>
                     <h3 className="text-lg font-medium tracking-[-0.01em] transition-colors group-hover:text-[var(--accent)] md:text-xl">
                       {item.title}
                     </h3>
