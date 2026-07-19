@@ -6,17 +6,17 @@
   </head>
   <body>
     <!--
-      Netlify Forms detection for Next.js.
-      This static HTML is parsed at deploy time so submissions from the React form are accepted.
-      Do not remove. Notification recipient is configured in the Netlify UI (not in this file).
+      Deploy-time form detection for Next.js (OpenNext / Netlify).
+      Submissions from the React form POST to this static file.
+      Notification recipient is configured in the Netlify UI only.
     -->
-    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
       <input type="hidden" name="form-name" value="contact" />
-      <input type="text" name="bot-field" />
-      <input type="text" name="organization" />
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <input type="text" name="inquiryType" />
+      <input name="bot-field" />
+      <input name="organization" type="text" />
+      <input name="name" type="text" />
+      <input name="email" type="email" />
+      <input name="inquiryType" type="text" />
       <textarea name="message"></textarea>
       <input type="checkbox" name="privacy" value="agreed" />
     </form>
