@@ -61,21 +61,21 @@ export default async function NewsIndexPage({
                 <Link
                   key={item.slug}
                   href={`/news/${item.slug}`}
-                  className="group grid gap-4 py-8 md:grid-cols-[120px_140px_1fr] md:items-center md:gap-8"
+                  className="group grid grid-cols-1 gap-4 py-8 sm:grid-cols-[7.5rem_8.75rem_minmax(0,1fr)] sm:items-center sm:gap-6 md:gap-8"
                 >
-                  <span className="font-[family-name:var(--font-display)] text-sm tracking-[0.08em] text-[var(--text-muted)]">
+                  <span className="font-[family-name:var(--font-display)] text-sm tracking-[0.08em] text-[var(--text-muted)] sm:self-center">
                     {displayDate && item.publishedAt ? (
                       <time dateTime={item.publishedAt}>{displayDate}</time>
                     ) : null}
                   </span>
 
                   {item.coverImage ? (
-                    <div className="relative aspect-[16/10] w-full max-w-[140px] overflow-hidden rounded-sm border border-white/10 bg-[var(--surface)]">
+                    <div className="news-thumb relative h-[5.5rem] w-[8.75rem] shrink-0 justify-self-start overflow-hidden rounded-sm border border-white/10 bg-[#ececec]">
                       <Image
                         src={item.coverImage}
                         alt=""
                         fill
-                        className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                        className="object-contain p-1 transition duration-500 group-hover:scale-[1.02]"
                         sizes="140px"
                       />
                     </div>
@@ -83,7 +83,7 @@ export default async function NewsIndexPage({
                     <span className="text-xs tracking-[0.14em] text-[var(--accent)]">{item.category}</span>
                   )}
 
-                  <div>
+                  <div className="min-w-0">
                     <p className="mb-1 text-[0.65rem] tracking-[0.14em] text-[var(--accent)]">{item.category}</p>
                     <h2 className="text-xl font-medium transition-colors group-hover:text-[var(--accent)]">
                       {item.title}
