@@ -70,12 +70,12 @@ export default async function NewsIndexPage({
                   </span>
 
                   {item.coverImage ? (
-                    <div className="news-thumb relative h-[5.5rem] w-[8.75rem] shrink-0 justify-self-start overflow-hidden rounded-sm border border-white/10 bg-[#ececec]">
+                    <div className="relative h-[88px] w-[140px] shrink-0 justify-self-start overflow-hidden rounded-sm border border-white/10 bg-[var(--surface)]">
                       <Image
                         src={item.coverImage}
                         alt=""
                         fill
-                        className="object-contain p-1 transition duration-500 group-hover:scale-[1.02]"
+                        className="object-cover object-center transition duration-500 group-hover:scale-[1.03]"
                         sizes="140px"
                       />
                     </div>
