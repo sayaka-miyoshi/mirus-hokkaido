@@ -43,8 +43,7 @@
             <li><strong>運営者</strong> 株式会社MIRUS</li>
             <li><strong>代表者</strong> 代表取締役　三好 清佳</li>
             <li><strong>所在地</strong> 〒060-0062 北海道札幌市中央区南二条西五丁目31-1 RMBld.701</li>
-            <li><strong>電話番号</strong> <span id="privacy-phone">090-3899-3333</span></li>
-            <li><strong>メール</strong> <a href="mailto:info@mirus-hokkaido.jp" id="privacy-email">info@mirus-hokkaido.jp</a></li>
+            <li><strong>お問い合わせ</strong> <a href="/contact/">お問い合わせフォーム</a></li>
           </ul>
         </div>
 
@@ -53,7 +52,7 @@
         </div>
         <div class="content-block">
           <h2>1. 取得する情報</h2>
-          <p>お問い合わせフォーム等を通じて、お名前、会社名、メールアドレス、電話番号、お問い合わせ内容を取得する場合があります。</p>
+          <p>お問い合わせフォーム等を通じて、お名前、会社名、メールアドレス、お問い合わせ内容を取得する場合があります。</p>
         </div>
         <div class="content-block">
           <h2>2. 利用目的</h2>
@@ -65,7 +64,7 @@
         </div>
         <div class="content-block">
           <h2>4. お問い合わせ</h2>
-          <p>個人情報の取扱いに関するお問い合わせは、上記運営会社情報の連絡先までご連絡ください。</p>
+          <p>個人情報の取扱いに関するお問い合わせは、サイト内のお問い合わせフォームよりご連絡ください。</p>
         </div>
         <p class="section-lead" style="margin-top:32px;">制定日：2026年6月15日</p>
       </div>
@@ -75,16 +74,6 @@
   <footer id="site-footer"></footer>
 
   <script src="../js/site-config.js"></script>
-  <script>
-    (function () {
-      const c = window.MIRUS_SITE;
-      if (!c) return;
-      const phone = document.getElementById("privacy-phone");
-      const email = document.getElementById("privacy-email");
-      if (phone) phone.innerHTML = `<a href="tel:${c.phoneTel}">${c.phone}</a>`;
-      if (email) { email.href = `mailto:${c.email}`; email.textContent = c.email; }
-    })();
-  </script>
   <script src="../js/footer.js"></script>
   <script src="../js/main.js"></script>
 </body>

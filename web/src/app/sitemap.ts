@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: `${base}/news`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/insights`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
     ...news.map((item) => ({
       url: `${base}/news/${item.slug}`,
       lastModified: item.publishedAt ? new Date(item.publishedAt) : new Date(),

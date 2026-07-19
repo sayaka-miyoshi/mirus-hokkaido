@@ -8,7 +8,6 @@ export const company = {
   postalCode: "〒060-0062",
   address: "北海道札幌市中央区南二条西五丁目31-1 RMBld.701",
   addressFull: "〒060-0062 北海道札幌市中央区南二条西五丁目31-1 RMBld.701",
-  email: "info@mirus-hokkaido.jp",
   domain: "https://mirus-hokkaido.jp",
   /** MIRUS本体の事業領域 */
   business: "企画、AI、DX、新規事業",
@@ -17,6 +16,17 @@ export const company = {
   instagramUrl: "https://www.instagram.com/insta.sayaka/",
   instagramHandle: "@insta.sayaka",
 } as const;
+
+/** お問い合わせフォームの種別（表示用。通知先メールはサイトに掲載しない） */
+export const contactInquiryTypes = [
+  "SNS運用",
+  "動画制作",
+  "インフルエンサー施策",
+  "AI / DX支援",
+  "セミナー・講演",
+  "取材・メディア",
+  "その他",
+] as const;
 
 /** 連携企業（グループ会社ではない） */
 export const strategicPartner = {

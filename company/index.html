@@ -52,11 +52,10 @@
             <li><strong>設立</strong> 2026年6月</li>
             <li><strong>法人番号</strong> 8430001097150</li>
             <li><strong>所在地</strong> 北海道札幌市中央区南二条西五丁目31-1 RMBld.701</li>
-            <li><strong>電話番号</strong> <span id="company-phone">090-3899-3333</span></li>
             <li><strong>事業内容</strong>
               SNS運用、映像制作、広告・PR、インフルエンサーマーケティング、観光PR
             </li>
-            <li><strong>お問い合わせ</strong> <a href="mailto:info@mirus-hokkaido.jp" id="company-email">info@mirus-hokkaido.jp</a></li>
+            <li><strong>お問い合わせ</strong> <a href="/contact/">お問い合わせフォーム</a></li>
           </ul>
         </div>
 
@@ -75,21 +74,6 @@
   <footer id="site-footer"></footer>
 
   <script src="../js/site-config.js"></script>
-  <script>
-    (function () {
-      const c = window.MIRUS_SITE;
-      if (!c) return;
-      const phone = document.getElementById("company-phone");
-      const email = document.getElementById("company-email");
-      if (phone) {
-        phone.innerHTML = `<a href="tel:${c.phoneTel}">${c.phone}</a>`;
-      }
-      if (email) {
-        email.href = `mailto:${c.email}`;
-        email.textContent = c.email;
-      }
-    })();
-  </script>
   <script src="../js/footer.js"></script>
   <script src="../js/main.js"></script>
 </body>

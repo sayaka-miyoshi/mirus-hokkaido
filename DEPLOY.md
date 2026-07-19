@@ -228,41 +228,15 @@ js\site-config.js  ← 同上（NG）
 
 ### 電話番号
 
+電話番号はサイトに掲載しません（`tel:` リンクも使用しません）。
 
+### お問い合わせ（Netlify Forms）
 
-`js/site-config.js` に **090-3899-3333** を設定済みです。変更時は `phone` と `phoneTel` を更新してください。
+本番サイト（Next.js）は **Netlify Forms** で受け付けます。メールアドレスはサイト上に掲載しません。
 
-
-
-### メール受信の設定（2つの方法）
-
-
-
-#### 方法1：お名前.com メール（推奨・審査向き）
-
-
-
-1. お名前.com → メールホスティング → `info@mirus-hokkaido.jp` を作成
-
-2. MXレコードをお名前.comの指示どおり設定
-
-3. WebメールまたはOutlook等で受信確認
-
-
-
-#### 方法2：FormSubmit（フォーム転送・即日可能）
-
-
-
-1. お問い合わせフォームからテスト送信
-
-2. `info@mirus-hokkaido.jp` に届く**確認メール**のリンクをクリック
-
-3. 以降、フォーム送信が `info@mirus-hokkaido.jp` に転送される
-
-
-
-※ 方法2だけではメール送受信の実在証明が弱い場合があります。審査には**方法1も併用推奨**。
+1. デプロイ後、Netlify → Forms に `contact` フォームが表示されることを確認
+2. Form notifications で通知先メールを設定（管理画面のみ。コードには書かない）
+3. サイトのフォームからテスト送信し、Forms 一覧と通知メールを確認
 
 
 
@@ -330,7 +304,7 @@ npx serve -l 8080 netlify-deploy
 
 | 設立 | 2026年6月15日 |
 
-| メール | info@mirus-hokkaido.jp |
+| お問い合わせ | サイト内フォーム（Netlify Forms） |
 
 
 

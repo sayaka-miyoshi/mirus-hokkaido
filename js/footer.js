@@ -16,8 +16,7 @@
           <p>${cfg.addressFull}</p>
         </div>
         <div class="footer-company-block">
-          <p>TEL：<a href="tel:${cfg.phoneTel}">${cfg.phone}</a></p>
-          <p>MAIL：<a href="mailto:${cfg.email}">${cfg.email}</a></p>
+          <p><a href="/#contact">お問い合わせフォーム</a></p>
         </div>
       </div>
     </div>
@@ -25,7 +24,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <span class="logo">MI<span>RUS</span></span>
-          <p>北海道を拠点に、SNS運用・映像制作・インフルエンサーマーケティング・観光PRを行う${cfg.companyName}</p>
+          <p>北海道を拠点に、企画・AI・DX・新規事業を行う${cfg.companyName}</p>
         </div>
         <div class="footer-col">
           <h4 class="font-en">Services</h4>
@@ -49,8 +48,6 @@
           <ul>
             <li><a href="/#contact">お問い合わせ</a></li>
             <li><a href="/contact/">お問い合わせフォーム</a></li>
-            <li><a href="mailto:${cfg.email}">${cfg.email}</a></li>
-            <li><a href="tel:${cfg.phoneTel}">${cfg.phone}</a></li>
           </ul>
         </div>
       </div>

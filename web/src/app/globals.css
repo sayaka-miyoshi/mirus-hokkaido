@@ -343,3 +343,111 @@ video {
     padding-bottom: 72px;
   }
 }
+
+/* —— Contact form —— */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.contact-honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.contact-required {
+  margin-left: 6px;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.contact-optional {
+  margin-left: 6px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px; /* avoid iOS zoom */
+  line-height: 1.5;
+}
+
+.contact-field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: rgba(110, 207, 245, 0.55);
+  box-shadow: 0 0 0 3px rgba(110, 207, 245, 0.12);
+}
+
+.contact-field select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+    linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 36px;
+}
+
+.contact-consent {
+  padding-top: 4px;
+}
+
+.contact-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.contact-consent-label input {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+
+@media (max-width: 767px) {
+  .contact-form {
+    gap: 18px;
+  }
+
+  .contact-field textarea {
+    min-height: 160px;
+  }
+}

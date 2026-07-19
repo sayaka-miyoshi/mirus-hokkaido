@@ -300,18 +300,16 @@
           <p class="section-label font-en">Contact</p>
           <h2 class="section-title">お問い合わせ</h2>
           <p class="contact-panel-lead">
-            SNS運用・映像制作・インフルエンサーマーケティング・観光PRに関するご相談は、メールまたはお問い合わせフォームよりお気軽にご連絡ください。
+            SNS運用・映像制作・インフルエンサーマーケティング・観光PRに関するご相談は、お問い合わせフォームよりお気軽にご連絡ください。
           </p>
 
           <ul class="contact-detail-list">
-            <li><strong>メール</strong> <a href="mailto:info@mirus-hokkaido.jp" id="home-email">info@mirus-hokkaido.jp</a></li>
-            <li><strong>電話</strong> <a href="tel:09038993333" id="home-phone">090-3899-3333</a></li>
+            <li><strong>お問い合わせ</strong> <a href="/contact/">お問い合わせフォーム</a></li>
             <li><strong>所在地</strong> <span id="home-address">北海道札幌市中央区南二条西五丁目31-1 RMBld.701</span></li>
           </ul>
 
           <div class="contact-panel-actions">
-            <a href="mailto:info@mirus-hokkaido.jp" class="btn btn-primary btn-arrow" id="home-mail-btn">メールで問い合わせ</a>
-            <a href="/contact/" class="btn btn-secondary">お問い合わせフォーム</a>
+            <a href="/contact/" class="btn btn-primary btn-arrow">お問い合わせフォーム</a>
           </div>
 
           <p class="section-label font-en" style="margin-bottom:16px;">External Links</p>
@@ -338,20 +336,8 @@
     (function () {
       const c = window.MIRUS_SITE;
       if (!c) return;
-      const email = document.getElementById("home-email");
-      const phone = document.getElementById("home-phone");
       const address = document.getElementById("home-address");
-      const mailBtn = document.getElementById("home-mail-btn");
-      if (email) {
-        email.href = "mailto:" + c.email;
-        email.textContent = c.email;
-      }
-      if (phone) {
-        phone.href = "tel:" + c.phoneTel;
-        phone.textContent = c.phone;
-      }
       if (address) address.textContent = c.address;
-      if (mailBtn) mailBtn.href = "mailto:" + c.email;
       const followers = document.getElementById("rep-sns-followers");
       if (followers && c.snsFollowersTotal) followers.textContent = c.snsFollowersTotal;
     })();

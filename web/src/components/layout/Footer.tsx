@@ -41,6 +41,11 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/privacy" className="hover:text-[var(--accent)]">
+                  Privacy
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -57,9 +62,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`mailto:${company.email}`} className="hover:text-[var(--accent)]">
-                  {company.email}
-                </a>
+                <Link href="/#contact" className="hover:text-[var(--accent)]">
+                  お問い合わせフォーム
+                </Link>
               </li>
             </ul>
           </div>

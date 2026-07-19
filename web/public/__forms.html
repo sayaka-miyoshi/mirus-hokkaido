@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>MIRUS form detection</title>
+  </head>
+  <body>
+    <!--
+      Netlify Forms detection for Next.js.
+      This static HTML is parsed at deploy time so submissions from the React form are accepted.
+      Do not remove. Notification recipient is configured in the Netlify UI (not in this file).
+    -->
+    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="organization" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="inquiryType" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="privacy" value="agreed" />
+    </form>
+  </body>
+</html>

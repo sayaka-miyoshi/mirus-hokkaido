@@ -21,7 +21,6 @@ export default async function HomePage() {
     "@type": "Organization",
     name: company.name,
     url: company.domain,
-    email: company.email,
     address: {
       "@type": "PostalAddress",
       streetAddress: "中央区南二条西五丁目31-1 RMBld.701",
