@@ -8,6 +8,7 @@ const nav = [
   { href: "/#philosophy", label: "Philosophy" },
   { href: "/#about", label: "About" },
   { href: "/#service", label: "Service" },
+  { href: "/#strength", label: "Strength" },
   ...(works.length > 0 ? [{ href: "/#works", label: "Works" }] : []),
   { href: "/news", label: "News" },
   { href: "/insights", label: "Insights" },

@@ -19,8 +19,8 @@ export function Company() {
           <div className="eyebrow-rule" />
           <h2 className="section-title">会社概要</h2>
           <p className="section-lead">
-            {strategicPartner.name}はグループ会社ではなく、{strategicPartner.label}
-            （{strategicPartner.labelJa}）です。
+            北海道札幌市を拠点に、プロモーション・コンテンツ制作を行っています。
+            {strategicPartner.name}はグループ会社ではなく、{strategicPartner.labelJa}です。
           </p>
         </Reveal>
 
@@ -36,11 +36,11 @@ export function Company() {
               </div>
             ))}
             <div className="grid gap-1 border-b border-white/8 px-5 py-4 last:border-b-0 sm:grid-cols-[120px_1fr] sm:gap-6 sm:px-6">
-              <dt className="text-sm text-[var(--text-muted)]">{strategicPartner.label}</dt>
+              <dt className="text-sm text-[var(--text-muted)]">{strategicPartner.labelJa}</dt>
               <dd className="text-sm leading-relaxed">
                 {strategicPartner.name}
                 <span className="mt-1 block text-[var(--text-muted)]">
-                  {strategicPartner.roles.join(" ／ ")}
+                  {strategicPartner.description}
                 </span>
               </dd>
             </div>

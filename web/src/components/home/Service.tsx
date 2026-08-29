@@ -10,7 +10,9 @@ export function Service() {
           <div className="eyebrow-rule" />
           <h2 className="section-title">事業内容</h2>
           <p className="section-lead">
-            MIRUSは企画・AI・DX・新規事業を担い、SNS運用・映像・自治体広報は{strategicPartner.label}と連携して提供します。
+            MIRUSが企画・プロデュースの主体となり、インフルエンサー施策からSNS・コンテンツ制作、
+            インバウンド・海外プロモーション、地域・観光プロモーションまで一貫して支援します。
+            {strategicPartner.description}
           </p>
         </Reveal>
 
@@ -18,14 +20,9 @@ export function Service() {
           {services.map((item, index) => (
             <Reveal key={item.number} delay={index * 0.05}>
               <article className="h-full bg-[var(--bg)] p-8 transition-colors hover:bg-[var(--bg-elevated)] md:p-10">
-                <div className="flex items-center justify-between gap-3">
-                  <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.18em] text-[var(--accent)]">
-                    {item.number}
-                  </p>
-                  <span className="text-[0.65rem] tracking-[0.14em] text-[var(--text-muted)]">
-                    {item.owner === "MIRUS" ? "MIRUS" : strategicPartner.label}
-                  </span>
-                </div>
+                <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.18em] text-[var(--accent)]">
+                  {item.number}
+                </p>
                 <h3 className="mt-6 font-[family-name:var(--font-display)] text-2xl font-medium tracking-[-0.02em]">
                   {item.title}
                 </h3>

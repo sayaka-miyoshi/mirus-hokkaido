@@ -279,6 +279,9 @@ video {
 /* Keep CTA in the copy group — top ≈ services gap×1.5, bottom closes into Philosophy */
 .heroCta {
   margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* Same-bg continuation from Hero: slightly softer entry, full exit into About */
@@ -459,5 +462,175 @@ video {
 
   .contact-field textarea {
     min-height: 160px;
+  }
+}
+
+/* —— Instagram promo (Contact sub content) —— */
+.instagram-promo {
+  width: 100%;
+}
+
+.instagram-promo-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  background: var(--bg-elevated);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.35s var(--ease), background 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+
+.instagram-promo-card:hover {
+  border-color: rgba(110, 207, 245, 0.28);
+  background: #0e1520;
+  transform: translateY(-1px);
+}
+
+.instagram-promo-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #0a1018;
+}
+
+.instagram-promo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 7, 12, 0.05) 40%,
+    rgba(5, 7, 12, 0.45) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.instagram-promo-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(110, 207, 245, 0.18), transparent 55%),
+    linear-gradient(145deg, #0a1018 0%, #121a26 48%, #0a1018 100%);
+}
+
+.instagram-promo-fallback-handle {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  letter-spacing: 0.06em;
+  color: rgba(245, 247, 250, 0.92);
+}
+
+.instagram-promo-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 28px 24px 32px;
+}
+
+.instagram-promo-kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.instagram-promo-title {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.instagram-promo-lead {
+  margin: 0;
+  max-width: 28rem;
+  font-size: 0.9375rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.instagram-promo-handle {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+.instagram-promo-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 0 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  transition: border-color 0.35s var(--ease), color 0.35s var(--ease),
+    background 0.35s var(--ease);
+}
+
+.instagram-promo-card:hover .instagram-promo-cta {
+  border-color: rgba(110, 207, 245, 0.4);
+  color: var(--accent);
+  background: rgba(110, 207, 245, 0.08);
+}
+
+@media (min-width: 768px) {
+  .instagram-promo-card {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  .instagram-promo-media {
+    aspect-ratio: auto;
+    min-height: 300px;
+  }
+
+  .instagram-promo-body {
+    padding: 36px 40px;
+    gap: 16px;
+  }
+
+  .instagram-promo-lead {
+    font-size: 1rem;
+  }
+
+  .instagram-promo-handle {
+    font-size: 1.25rem;
+  }
+
+  .instagram-promo-cta {
+    min-height: 52px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .instagram-promo-media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .instagram-promo-body {
+    padding: 24px 20px 28px;
+  }
+
+  .instagram-promo-cta {
+    width: 100%;
+    min-height: 52px;
   }
 }

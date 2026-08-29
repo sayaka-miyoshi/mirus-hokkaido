@@ -52,12 +52,12 @@ export default config({
           fields.select({
             label: "関連サービス",
             options: [
-              { label: "企画・事業設計", value: "planning" },
-              { label: "AI活用支援", value: "ai" },
-              { label: "DX・仕組み化", value: "dx" },
-              { label: "新規事業開発", value: "new-business" },
-              { label: "SNS運用・映像制作", value: "sns-video" },
-              { label: "インフルエンサー・自治体広報", value: "influencer-gov" },
+              { label: "インフルエンサーマーケティング", value: "influencer" },
+              { label: "インバウンド・海外プロモーション", value: "inbound" },
+              { label: "SNS・コンテンツプロデュース", value: "sns-content" },
+              { label: "地域・観光プロモーション", value: "regional" },
+              { label: "企画・新規プロジェクト", value: "planning" },
+              { label: "AI・デジタル活用", value: "ai-digital" },
             ],
             defaultValue: "planning",
           }),

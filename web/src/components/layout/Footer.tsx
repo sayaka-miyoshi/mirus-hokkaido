@@ -15,12 +15,22 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-[var(--text-secondary)]">
               {company.tagline}
               <br />
-              {company.servicesLine}
+              {company.heroSubcopy}
             </p>
           </div>
           <div>
             <p className="mb-4 text-xs tracking-[0.18em] text-[var(--text-muted)]">NAVIGATE</p>
             <ul className="space-y-3 text-sm text-[var(--text-secondary)]">
+              <li>
+                <Link href="/#service" className="hover:text-[var(--accent)]">
+                  Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/#strength" className="hover:text-[var(--accent)]">
+                  Strength
+                </Link>
+              </li>
               <li>
                 <Link href="/news" className="hover:text-[var(--accent)]">
                   News

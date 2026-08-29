@@ -6,6 +6,7 @@ import { HomeInsights } from "@/components/home/HomeInsights";
 import { HomeNews } from "@/components/home/HomeNews";
 import { Philosophy } from "@/components/home/Philosophy";
 import { Service } from "@/components/home/Service";
+import { Strength } from "@/components/home/Strength";
 import { Works } from "@/components/home/Works";
 import { company } from "@/lib/company";
 import { getLatestNews, getPublishedInsightsCount } from "@/lib/content";
@@ -21,6 +22,7 @@ export default async function HomePage() {
     "@type": "Organization",
     name: company.name,
     url: company.domain,
+    description: company.heroSubcopy,
     address: {
       "@type": "PostalAddress",
       streetAddress: "中央区南二条西五丁目31-1 RMBld.701",
@@ -44,11 +46,12 @@ export default async function HomePage() {
       <Hero />
       <Philosophy />
       <About />
-      <Company />
       <Service />
+      <Strength />
       <Works />
       <HomeNews items={latestNews} />
       {publishedInsightsCount > 0 ? <HomeInsights /> : null}
+      <Company />
       <Contact />
     </>
   );

@@ -21,7 +21,20 @@ export type RelatedServiceValue = (typeof relatedServiceOptions)[number]["value"
 export const DEFAULT_OG_IMAGE = "/opengraph-image";
 
 export function getRelatedServiceLabel(value: string) {
-  return relatedServiceOptions.find((item) => item.value === value)?.label ?? value;
+  const legacyLabels: Record<string, string> = {
+    planning: "企画・新規プロジェクト",
+    ai: "AI・デジタル活用",
+    dx: "AI・デジタル活用",
+    "new-business": "企画・新規プロジェクト",
+    "sns-video": "SNS・コンテンツプロデュース",
+    "influencer-gov": "インフルエンサーマーケティング",
+  };
+
+  return (
+    relatedServiceOptions.find((item) => item.value === value)?.label ??
+    legacyLabels[value] ??
+    value
+  );
 }
 
 function sortByDateDesc<T extends { publishedAt: string | null }>(items: T[]) {

@@ -7,14 +7,14 @@ export function Works() {
   if (works.length === 0) return null;
 
   return (
-    <section id="works" className="section bg-[var(--bg-elevated)]">
+    <section id="works" className="section">
       <div className="container">
         <Reveal>
           <p className="section-label">Works</p>
           <div className="eyebrow-rule" />
           <h2 className="section-title">実績</h2>
           <p className="section-lead">
-            Strategic Partner（連携企業）による支援事例を掲載しています。
+            MIRUSが企画・プロデュースしたプロモーション事例を掲載しています。
           </p>
         </Reveal>
 

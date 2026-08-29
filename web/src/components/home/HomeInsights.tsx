@@ -13,7 +13,7 @@ export function HomeInsights() {
                 MIRUSの知見を発信するオウンドメディア
               </h2>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-[var(--text-secondary)]">
-                AI / SNS / DX / Marketing / Local。ブログではなく、現場の設計知を届けます。
+                SNS・プロモーション・Marketing・Local。ブログではなく、現場の設計知を届けます。
               </p>
             </div>
             <Link href="/insights" className="btn btn-ghost self-start md:self-auto">

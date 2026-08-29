@@ -1,6 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { ContactForm } from "@/components/home/ContactForm";
-import { company } from "@/lib/company";
 
 export function Contact() {
   return (
@@ -11,10 +10,11 @@ export function Contact() {
             <div className="text-center">
               <p className="section-label">Contact</p>
               <div className="mx-auto eyebrow-rule" />
-              <h2 className="section-title">お問い合わせ</h2>
+              <h2 className="section-title">北海道から、新しい発信を。</h2>
               <p className="mx-auto section-lead">
-                企画・AI・DX・新規事業、および連携体制でのSNS・映像・広報支援に関するご相談は、
-                下記フォームよりお送りください。内容を確認のうえ、ご連絡いたします。
+                SNS・インフルエンサー・インバウンドプロモーション、コンテンツ制作、
+                企画・プロジェクトに関するご相談は、下記フォームよりお送りください。
+                内容を確認のうえ、ご連絡いたします。
               </p>
             </div>
 
@@ -23,16 +23,7 @@ export function Contact() {
             </div>
 
             <p className="mt-8 text-center text-sm text-[var(--text-muted)]">
-              Instagram{" "}
-              <a
-                href={company.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--accent)] hover:underline"
-              >
-                {company.instagramHandle}
-              </a>
-              からもご連絡いただけます。
+              プロモーション・企画のご相談はこちらから。お気軽にお問い合わせください。
             </p>
           </div>
         </Reveal>

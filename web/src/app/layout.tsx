@@ -17,26 +17,28 @@ const syne = Syne({
   display: "swap",
 });
 
+const siteDescription = `${company.name}は北海道札幌市を拠点に、SNS・インフルエンサー・コンテンツ制作・インバウンドプロモーションを通じて、企業・自治体・地域の魅力を国内外へ届けます。`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(company.domain),
   title: {
     default: `${company.name} — ${company.tagline}`,
     template: `%s | ${company.name}`,
   },
-  description: `${company.name}は北海道札幌市を拠点に、${company.business}を行っています。`,
+  description: siteDescription,
   openGraph: {
     type: "website",
     locale: "ja_JP",
     siteName: company.name,
-    title: `${company.name} — ${company.tagline}`,
-    description: company.servicesLine,
+    title: `${company.name} — ${company.heroHeadline}`,
+    description: siteDescription,
     url: company.domain,
     images: [{ url: "/opengraph-image", alt: company.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${company.name} — ${company.tagline}`,
-    description: company.servicesLine,
+    title: `${company.name} — ${company.heroHeadline}`,
+    description: siteDescription,
     images: ["/opengraph-image"],
   },
   alternates: {

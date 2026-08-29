@@ -48,7 +48,7 @@ export default function OpenGraphImage() {
             MIRUS Inc.
           </div>
           <div style={{ fontSize: 36, color: "rgba(255,255,255,0.82)", maxWidth: 900 }}>
-            北海道を、見る・伝える・つなぐ。
+            北海道と世界を、コンテンツでつなぐ。
           </div>
         </div>
       </div>

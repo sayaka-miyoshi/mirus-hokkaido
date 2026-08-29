@@ -4,8 +4,6 @@ import Link from "next/link";
 import { company } from "@/lib/company";
 import { HeroBrandCanvas } from "@/components/home/HeroBrandCanvas";
 
-const HERO_HEADLINE_EN = "Creating the Future of Hokkaido.";
-
 export function Hero() {
   return (
     <section className="hero">
@@ -17,15 +15,21 @@ export function Hero() {
         <p className="heroBrand">{company.name}</p>
         <h1 className="heroHeadline">
           <span className="block max-[360px]:whitespace-normal whitespace-nowrap">
-            北海道の未来を、
+            北海道と世界を、
           </span>
-          <span className="block">創造する。</span>
+          <span className="block">コンテンツでつなぐ。</span>
         </h1>
-        <p className="heroHeadlineEn">{HERO_HEADLINE_EN}</p>
-        <p className="heroServices">{company.servicesLine}</p>
+        <p className="heroHeadlineEn">{company.heroHeadlineEn}</p>
+        <p className="heroServices">{company.heroSubcopy}</p>
+        <p className="mt-6 font-[family-name:var(--font-display)] text-sm tracking-[0.14em] text-[var(--accent)]">
+          {company.tagline}
+        </p>
         <div className="heroCta">
-          <Link href="/#service" className="btn btn-primary">
-            Serviceを見る
+          <Link href="/#contact" className="btn btn-primary">
+            プロモーション・企画のご相談はこちら
+          </Link>
+          <Link href="/#service" className="btn btn-ghost">
+            事業内容を見る
           </Link>
         </div>
       </div>
