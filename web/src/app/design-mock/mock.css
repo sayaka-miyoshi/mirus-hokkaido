@@ -1031,6 +1031,176 @@ body:has(.design-mock-body) {
   color: var(--m-accent);
 }
 
+/* —— Concept C: logo opening —— */
+.dm-c-pin {
+  position: relative;
+  height: 220vh;
+}
+
+.dm-c-pin-b {
+  height: 240vh;
+}
+
+.dm-c-sticky {
+  position: sticky;
+  top: calc(44px + var(--m-header));
+  height: calc(100svh - 44px - var(--m-header));
+  overflow: hidden;
+  background: var(--m-bg-soft);
+}
+
+.dm-c-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--m-bg-soft);
+}
+
+.dm-c-stage-b {
+  background: var(--m-bg);
+}
+
+.dm-c-logo {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.dm-c-logo-b {
+  z-index: 5;
+}
+
+.dm-c-mark {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.dm-c-mark img {
+  display: block;
+  height: var(--mirus-mark-h, 128px);
+  width: auto;
+}
+
+.dm-c-window {
+  position: absolute;
+  width: min(42vw, 220px);
+  aspect-ratio: 403 / 388;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  will-change: transform;
+  background: var(--m-bg);
+  -webkit-mask-image: var(--m-mask);
+  mask-image: var(--m-mask);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.dm-c-window-inner {
+  width: min(92vw, 640px);
+  padding: 24px;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  will-change: transform;
+}
+
+.dm-c-window-inner .dm-hero-sub {
+  margin-inline: auto;
+}
+
+.dm-c-type {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 640px);
+  padding: 24px;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.dm-c-type-b {
+  z-index: 1;
+}
+
+.dm-c-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.dm-c-veil-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.dm-c-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--m-text-muted);
+  pointer-events: none;
+}
+
+.dm-c-static {
+  padding: clamp(64px, 12vw, 120px) 0;
+  background: var(--m-bg-soft);
+}
+
+.dm-c-static-inner {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.dm-c-note {
+  border-top: 1px solid var(--m-border);
+}
+
+.dm-hub-card-plain {
+  min-height: 220px;
+  align-content: center;
+}
+
+.dm-header-c .dm-nav {
+  gap: clamp(14px, 2vw, 24px);
+}
+
+@media (max-width: 959px) {
+  .dm-c-pin,
+  .dm-c-pin-b {
+    height: 200vh;
+  }
+
+  .dm-c-window {
+    width: min(56vw, 180px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .dm-works-pin {
     height: auto;
@@ -1046,5 +1216,16 @@ body:has(.design-mock-body) {
 
   .dm-works-track {
     display: none;
+  }
+
+  .dm-c-pin,
+  .dm-c-pin-b {
+    height: auto;
+  }
+
+  .dm-c-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
   }
 }

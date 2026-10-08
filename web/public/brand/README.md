@@ -6,6 +6,8 @@
 |------|---------|
 | `mirus-logo-original.jpg` | Source file as provided (do not edit design) |
 | `mirus-logo.png` | Transparent PNG for site use (white background removed only) |
+| `mirus-m-mark.png` | M symbol only (cropped from official art; geometry unchanged) |
+| `mirus-m-mark-2x.png` | Higher-res M mark for scroll-scale / mask use |
 
 ### Usage rules
 

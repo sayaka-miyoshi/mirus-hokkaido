@@ -21,9 +21,9 @@ export function DesignMockHub() {
           <p className="dm-hero-kicker" style={{ marginTop: 28 }}>
             Design mock comparison
           </p>
-          <h1 className="dm-hub-title">TOPデザイン 2案</h1>
+          <h1 className="dm-hub-title">TOPデザイン A / B / C</h1>
           <p className="dm-lead" style={{ marginTop: 16, maxWidth: "36rem" }}>
-            本番サイトは変更していません。A / B を開き、PC・スマホでスクロール演出と配色を比較してください。
+            本番サイトは変更していません。PC・スマホでスクロール演出と配色を比較してください。
           </p>
         </div>
 
@@ -61,6 +61,15 @@ export function DesignMockHub() {
               <h2>Creative / Works</h2>
               <p>映像・実績ビジュアルを主役に。モザイクとズームで構成。</p>
               <span className="dm-hub-link">B案を開く →</span>
+            </div>
+          </Link>
+
+          <Link href="/design-mock/c" className="dm-hub-card dm-hub-card-plain">
+            <div className="dm-hub-card-body">
+              <p className="dm-label">Concept C</p>
+              <h2>Logo Opening</h2>
+              <p>公式Mシンボルのオープニング演出。Expand / Aperture の2パターン。</p>
+              <span className="dm-hub-link">C案を開く →</span>
             </div>
           </Link>
         </div>

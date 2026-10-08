@@ -6,7 +6,7 @@ import { MirusLogo } from "@/components/brand/MirusLogo";
 import { company } from "@/lib/company";
 
 export type MockTheme = "cool" | "warm";
-export type MockConcept = "a" | "b";
+export type MockConcept = "a" | "b" | "c" | "c1" | "c2";
 
 const THEME_KEY = "mirus-design-mock-theme";
 
@@ -30,23 +30,30 @@ export function MockBanner({
   theme,
   onTheme,
 }: {
-  concept: MockConcept | "hub";
+  concept: MockConcept | "hub"; // hub = comparison index
   theme: MockTheme;
   onTheme: (t: MockTheme) => void;
 }) {
   return (
     <div className="dm-banner">
-      <span>デザインモック（本番未反映）— TOP 2案を比較</span>
+      <span>デザインモック（本番未反映）— A / B / C 比較</span>
       <div className="dm-banner-controls">
         <div className="dm-concept-switch" role="tablist" aria-label="デザイン案">
           <Link href="/design-mock" className="dm-concept-btn" data-active={concept === "hub"}>
             比較
           </Link>
           <Link href="/design-mock/a" className="dm-concept-btn" data-active={concept === "a"}>
-            A エディトリアル
+            A
           </Link>
           <Link href="/design-mock/b" className="dm-concept-btn" data-active={concept === "b"}>
-            B クリエイティブ
+            B
+          </Link>
+          <Link
+            href="/design-mock/c"
+            className="dm-concept-btn"
+            data-active={concept === "c" || concept === "c1" || concept === "c2"}
+          >
+            C ロゴ
           </Link>
         </div>
         <div className="dm-theme-switch">
@@ -75,7 +82,16 @@ export function MockBanner({
 
 export function MockHeader({ concept }: { concept: MockConcept }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const prefix = concept === "a" ? "/design-mock/a" : "/design-mock/b";
+  const prefix =
+    concept === "a"
+      ? "/design-mock/a"
+      : concept === "b"
+        ? "/design-mock/b"
+        : concept === "c1"
+          ? "/design-mock/c/1"
+          : concept === "c2"
+            ? "/design-mock/c/2"
+            : "/design-mock/c";
 
   return (
     <header className="dm-header">
@@ -153,6 +169,9 @@ export function MockFooter() {
             </li>
             <li>
               <Link href="/design-mock/b">B — Creative / Works</Link>
+            </li>
+            <li>
+              <Link href="/design-mock/c">C — Logo Opening</Link>
             </li>
             <li>
               <a href="https://mirus-hokkaido.jp/" target="_blank" rel="noopener noreferrer">

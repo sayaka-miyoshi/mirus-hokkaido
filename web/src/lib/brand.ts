@@ -15,4 +15,12 @@ export const brand = {
     width: 1024,
     height: 1024,
   },
+  /** M symbol only — cropped from official artwork, geometry unchanged */
+  mark: {
+    src: "/brand/mirus-m-mark.png",
+    src2x: "/brand/mirus-m-mark-2x.png",
+    alt: "MIRUS",
+    width: 403,
+    height: 388,
+  },
 } as const;
