@@ -3,7 +3,7 @@ import "./mock.css";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "MIRUS Design Mock — Theme compare & scroll motion（確認用）",
+    absolute: "MIRUS Design Mock — TOP A/B comparison（確認用）",
   },
   robots: {
     index: false,
@@ -12,6 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function DesignMockLayout({ children }: { children: React.ReactNode }) {
-  // Outer wrapper styles come from DesignMockPage (theme-aware root).
   return <>{children}</>;
 }

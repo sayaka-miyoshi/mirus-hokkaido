@@ -1,5 +1,5 @@
-import { DesignMockPage } from "@/components/design-mock/DesignMockPage";
+import { DesignMockHub } from "@/components/design-mock/DesignMockHub";
 
 export default function DesignMockRoute() {
-  return <DesignMockPage />;
+  return <DesignMockHub />;
 }

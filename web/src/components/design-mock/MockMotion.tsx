@@ -89,7 +89,17 @@ export function MockParallaxImage({
   );
 }
 
-export function MockHeroMedia({ src, alt }: { src: string; alt: string }) {
+export function MockHeroMedia({
+  src,
+  alt,
+  objectPosition = "center center",
+  className,
+}: {
+  src: string;
+  alt: string;
+  objectPosition?: string;
+  className?: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -97,19 +107,20 @@ export function MockHeroMedia({ src, alt }: { src: string; alt: string }) {
     offset: ["start start", "end start"],
   });
   const smooth = useSpring(scrollYProgress, { stiffness: 80, damping: 26 });
-  const scale = useTransform(smooth, [0, 1], [1.08, 1.28]);
-  const y = useTransform(smooth, [0, 1], ["0%", "14%"]);
-  const opacity = useTransform(smooth, [0, 0.85], [1, 0.55]);
+  const scale = useTransform(smooth, [0, 1], [1.06, 1.22]);
+  const y = useTransform(smooth, [0, 1], ["0%", "12%"]);
+  const opacity = useTransform(smooth, [0, 0.9], [1, 0.62]);
 
   return (
-    <div ref={ref} className="dm-hero-media" aria-hidden>
+    <div ref={ref} className={`dm-hero-media ${className ?? ""}`} aria-hidden={!alt}>
       <motion.div className="absolute inset-0" style={reduce ? undefined : { scale, y, opacity }}>
         <Image
           src={src}
           alt={alt}
           fill
           priority
-          className="object-cover object-[center_28%]"
+          className="object-cover"
+          style={{ objectPosition }}
           sizes="100vw"
         />
       </motion.div>
@@ -186,11 +197,11 @@ export function MockHorizontalWorks({ items }: { items: MockWorkCard[] }) {
       <div className="dm-works-sticky">
         <div className="dm-container" style={{ marginBottom: 28 }}>
           <p className="dm-label">Works</p>
-          <h2 className="dm-title" style={{ marginBottom: 8 }}>
-            実績を、横へひらく。
+          <h2 className="dm-title dm-title-md" style={{ marginBottom: 8 }}>
+            Works
           </h2>
           <p className="dm-lead">
-            スクロールに合わせて事例が横方向に展開します（モック用サンプル画像）。
+            スクロールに連動して事例が横へ展開します（既存の公開素材によるモック）。
           </p>
         </div>
         <motion.div ref={trackRef} className="dm-works-track" style={{ x }}>
