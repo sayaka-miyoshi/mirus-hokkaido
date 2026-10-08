@@ -107,13 +107,22 @@ body:has(.design-mock-body) {
 
 .dm-brand img {
   display: block;
-  height: 40px;
+  --mirus-logo-h: 40px;
+  height: var(--mirus-logo-h);
   width: auto;
+}
+
+.dm-footer .dm-brand img {
+  --mirus-logo-h: 48px;
 }
 
 @media (max-width: 767px) {
   .dm-brand img {
-    height: 34px;
+    --mirus-logo-h: 34px;
+  }
+
+  .dm-footer .dm-brand img {
+    --mirus-logo-h: 40px;
   }
 }
 
